@@ -6,7 +6,7 @@ import "./index.scss";
 function NewsPost(props) {
   const data = props.data.attributes;
   const imageUrl = data.thumbnail.data.attributes.url;
-  const url = process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL + imageUrl;
+  const url = "http://127.0.0.1:1337" + imageUrl;
 
   return (
     <div className={"news-post-component"}>

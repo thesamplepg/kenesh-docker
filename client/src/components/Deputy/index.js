@@ -5,8 +5,7 @@ import Image from "next/image";
 
 function Deputy({ data, round }) {
   const info = data.attributes;
-  const imageUrl =
-    process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL + info.avatar.data.attributes.url;
+  const imageUrl = "http://127.0.0.1:1337" + info.avatar.data.attributes.url;
   const fraction = info.fraction.data && info.fraction.data.attributes.name;
 
   return (

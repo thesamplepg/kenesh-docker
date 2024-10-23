@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 function Gallery({ images }) {
   const slides = images.data.map((image, index) => {
     const data = image.attributes;
-    const url = process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL + data.url;
+    const url = "http://127.0.0.1:1337" + data.url;
     const style = { backgroundImage: `url(${url})` };
 
     return (

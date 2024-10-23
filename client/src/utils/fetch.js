@@ -6,7 +6,6 @@ export const fetchStrapi = async (endpoint, field) => {
     : process.env.STRAPI_API_URL; // Server-side URL
 
   const testUrl = `${baseUrl}/api/${endpoint}`;
-  console.log(isClient ? "--CLIENT - " : "--SERVER--", testUrl);
 
   const apiKey = isClient
     ? process.env.NEXT_PUBLIC_STRAPI_API_KEY // Client-side URL
@@ -40,7 +39,6 @@ export const postStrapi = async (endpoint, data) => {
     : process.env.STRAPI_API_URL; // Server-side URL
 
   const testUrl = `${baseUrl}/api/${endpoint}`;
-  console.log(isClient ? "--CLIENT - " : "--SERVER--", testUrl);
 
   const apiKey = isClient
     ? process.env.NEXT_PUBLIC_STRAPI_API_KEY // Client-side URL

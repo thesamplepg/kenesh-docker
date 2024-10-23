@@ -11,7 +11,7 @@ import { Link } from "@/navigation";
 function MainPost({ data }) {
   const images = data.attributes.images.data.map((image, index) => {
     const data = image.attributes;
-    const url = process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL + data.url;
+    const url = "http://127.0.0.1:1337" + data.url;
 
     return (
       <SwiperSlide key={index}>

@@ -7,8 +7,7 @@ function Fractions({ data }) {
   const t = useTranslations("Widgets");
   const fractions = data.map((fraction) => {
     const data = fraction.attributes;
-    const imageUrl =
-      process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL + data.image.data.attributes.url;
+    const imageUrl = "http://127.0.0.1:1337" + data.image.data.attributes.url;
 
     return (
       <li className="fractions-item" key={fraction.id}>

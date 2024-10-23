@@ -4,8 +4,7 @@ import "./index.scss";
 
 function Fraction({ data }) {
   const imageUrl =
-    process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL +
-    data.attributes.image.data.attributes.url;
+    "http://127.0.0.1:1337" + data.attributes.image.data.attributes.url;
 
   return (
     <div className="fraction-component drop-shadow-lg">

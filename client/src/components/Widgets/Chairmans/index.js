@@ -7,9 +7,7 @@ function Chairmans({ data }) {
   const t = useTranslations("Widgets");
   const chairmans = data.map((chairman) => {
     const data = chairman.attributes;
-    const imageUrl =
-      process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL +
-      data.avatar.data.attributes.url;
+    const imageUrl = "http://127.0.0.1:1337" + data.avatar.data.attributes.url;
 
     return (
       <li className="chairmans-item" key={chairman.id}>

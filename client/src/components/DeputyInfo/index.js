@@ -18,8 +18,7 @@ const socialIcons = {
 };
 
 function DeputyInfo({ name, group, avatar, phone, mail, social, text }) {
-  const url =
-    process.env.NEXT_PUBLIC_STRAPI_MEDIA_URL + avatar.data.attributes.url;
+  const url = "http://127.0.0.1:1337" + avatar.data.attributes.url;
 
   const style = {
     backgroundImage: `url(${url})`,
