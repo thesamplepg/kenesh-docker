@@ -1,0 +1,72 @@
+.main-footer-component {
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    line-height: 2em;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+
+    .about {
+      width: 35%;
+
+      h2 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 1.5em;
+      }
+
+      p {
+        font-weight: 400;
+        opacity: 0.7;
+        line-height: 1.5em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .about {
+        width: 40%;
+      }
+
+      section {
+        width: 40%;
+        margin: 1.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    .container {
+      font-size: 16px;
+      justify-content: start;
+
+      .about {
+        width: 90%;
+      }
+
+      section {
+        width: 100%;
+        margin: 1.5rem;
+      }
+    }
+  }
+}

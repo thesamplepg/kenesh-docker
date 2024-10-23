@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apply",
+  "info": {
+    "singularName": "applies",
+    "pluralName": "apply",
+    "displayName": "Обращения"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "social_status": {
+      "type": "string"
+    },
+    "apply_status": {
+      "type": "string"
+    },
+    "forwho": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

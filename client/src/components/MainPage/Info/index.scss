@@ -1,0 +1,41 @@
+.main-page__info {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-blocks {
+    width: 50%;
+    margin: 0 1rem;
+  }
+
+  .content {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      flex-wrap: wrap;
+    }
+
+    .info-blocks {
+      margin: 1rem 1rem;
+      width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .container {
+      justify-content: center;
+    }
+
+    .info-blocks {
+      margin: 2rem 1rem;
+      width: 350px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

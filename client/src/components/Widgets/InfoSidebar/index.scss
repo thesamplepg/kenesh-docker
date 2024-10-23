@@ -1,0 +1,12 @@
+.wdiget-info-sidebar {
+  border-radius: 5px;
+  margin-top: 1rem;
+
+  .sidebar-blocks {
+    margin: 2rem 0;
+
+    &:nth-child(1) {
+      margin-top: 0rem;
+    }
+  }
+}

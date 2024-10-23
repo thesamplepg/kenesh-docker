@@ -1,0 +1,61 @@
+.deputy-main-info-component {
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+
+  .avatar {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+
+    @media screen and (max-width: 450px) {
+      height: 400px;
+    }
+  }
+
+  .info {
+    padding: 1.5rem;
+
+    svg {
+      width: 1rem;
+      margin-right: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 0.8rem;
+      opacity: 0.8;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0.2rem 0;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    a {
+      display: flex;
+      color: var(--accent-color);
+    }
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .socials {
+    display: flex;
+    margin-top: 1rem;
+
+    svg {
+      margin-right: 0.5rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.ui-table-component {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.046);
+  overflow: hidden;
+  background-color: #ffffffb7;
+
+  thead {
+    font-size: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.077);
+    color: var(--accent-color);
+    line-height: 1rem;
+
+    th {
+      padding: 1.5rem;
+      text-align: start;
+      font-weight: 600;
+    }
+  }
+
+  tbody {
+    td {
+      padding: 1.5rem;
+    }
+
+    tr {
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.077);
+
+      &:hover {
+        background-color: #f4f4f482;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 1024px;
+  }
+}

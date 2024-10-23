@@ -1,0 +1,46 @@
+.ui-pagination {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  margin-top: 3rem;
+
+  .pagination-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .pagination-item {
+    margin: 0 0.2rem;
+  }
+
+  .pagination-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: var(--dark-bg);
+    }
+  }
+
+  .current {
+    a {
+      background-color: var(--accent-color);
+      color: #fff;
+      width: 3.3rem;
+      height: 3.3rem;
+      font-size: 1.7rem;
+
+      &:hover {
+        background-color: var(--accent-color);
+      }
+    }
+  }
+}

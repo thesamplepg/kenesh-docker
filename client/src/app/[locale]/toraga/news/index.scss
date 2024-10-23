@@ -1,0 +1,26 @@
+.page-deputy__news {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &-item {
+    width: 380px;
+    height: 250px;
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &-list {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    &-item {
+      width: 100%;
+      height: 28vh;
+    }
+  }
+}

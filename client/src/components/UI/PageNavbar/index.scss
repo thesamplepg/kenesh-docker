@@ -1,0 +1,47 @@
+.ui-page-navbar {
+  width: 100%;
+
+  .menu-list {
+    display: flex;
+    background-color: var(--dark-bg);
+    border-radius: 5px;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+  }
+
+  .menu-item {
+    margin: 1rem 0.5rem;
+  }
+
+  .menu-item a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--accent-color);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.025);
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+  }
+
+  .menu-item--active a {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .menu-list {
+      padding: 0.5rem;
+    }
+
+    .menu-item {
+      margin: 0.5rem;
+    }
+  }
+}

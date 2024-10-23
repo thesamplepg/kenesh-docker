@@ -1,0 +1,67 @@
+.widget-fractions {
+  width: 100%;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    // color: var(--accent-color)
+    opacity: 0.7;
+  }
+
+  .fractions-item {
+    margin-bottom: 1rem;
+
+    &:hover img {
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.201);
+    }
+  }
+
+  .fractions-item a {
+    display: flex;
+    align-items: center;
+    color: var(--accent-color);
+    // background-color: var(--accent-color);
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 5px;
+      object-fit: cover;
+      box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.031);
+      transition: all 0.3s;
+    }
+
+    .info {
+      width: 100%;
+      padding-left: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+    }
+  }
+
+  .bills-button {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+
+    a {
+      padding: 0.5rem 1.5rem;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+}

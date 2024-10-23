@@ -1,0 +1,46 @@
+.deputies-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .deputies-list-item {
+    width: 25%;
+    height: 500px;
+    padding: 0.5rem;
+
+    .deputy-item-container {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .deputies-list-item {
+      width: 33.3%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .deputies-list-item {
+      width: 33.3%;
+      height: 350px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .deputies-list-item {
+      width: 50%;
+      height: 280px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .deputies-list-item {
+      margin: 0 auto;
+      width: 80%;
+      height: 400px;
+    }
+  }
+}

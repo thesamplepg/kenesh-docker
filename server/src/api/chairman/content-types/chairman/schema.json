@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "chairmans",
+  "info": {
+    "singularName": "chairman",
+    "pluralName": "chairmans",
+    "displayName": "Заместители Торага",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "deputies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::deputy.deputy"
+    }
+  }
+}

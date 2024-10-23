@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fractions",
+  "info": {
+    "singularName": "fraction",
+    "pluralName": "fractions",
+    "displayName": "Фракции",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "deputies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::deputy.deputy",
+      "mappedBy": "fraction"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "fractions"
+    }
+  }
+}

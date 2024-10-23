@@ -1,0 +1,30 @@
+.ui-langswitcher {
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+
+  a {
+    font-weight: 500;
+    opacity: 0.5;
+    font-size: 0.8em;
+
+    &:first-child {
+      margin-right: 0.4em;
+    }
+
+    &:hover {
+      color: var(--accent-color);
+      opacity: 1;
+    }
+  }
+}
+
+.ui-langswitcher-ru a:last-child {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.ui-langswitcher-ky a:first-child {
+  opacity: 1;
+  color: var(--accent-color);
+}

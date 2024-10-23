@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_data_social_links",
+  "info": {
+    "displayName": "Social Links",
+    "icon": "oneToMany"
+  },
+  "options": {},
+  "attributes": {
+    "instagram": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    }
+  }
+}

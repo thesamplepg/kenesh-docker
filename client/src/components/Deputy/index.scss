@@ -1,0 +1,54 @@
+.deputy-component {
+  // border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-bg);
+  position: relative;
+  overflow: hidden;
+
+  &:hover .deputy-image {
+    transform: scale(1.2);
+  }
+
+  .deputy-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: all 0.5s;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.648) 0%,
+        rgba(0, 0, 0, 0) 40%
+      );
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .deputy-info {
+    padding: 1.5rem;
+    position: absolute;
+    bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}

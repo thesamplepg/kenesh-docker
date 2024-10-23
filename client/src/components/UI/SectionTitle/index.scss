@@ -1,0 +1,17 @@
+.ui-section-title {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  span {
+    width: 80px;
+    height: 0.3rem;
+    display: block;
+    background-color: var(--accent-color);
+    opacity: 0.9;
+    margin-top: 0.2rem;
+  }
+}

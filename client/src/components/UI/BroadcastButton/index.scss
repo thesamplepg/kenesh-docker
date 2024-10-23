@@ -1,0 +1,93 @@
+.ui-broadcast-button {
+  transition: all 0.3s;
+
+  .live-indicator {
+    background-color: var(--accent-color);
+    border-radius: 100px;
+    animation: scale 1s, pulse 2s infinite;
+    box-shadow: 0 0 0 0 rgba(91, 150, 212, 0.7);
+    transform: scale(0);
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0.3rem;
+    transition: all 0.3s;
+  }
+
+  @keyframes scale {
+    0% {
+      width: 0px;
+      height: 0px;
+      margin-right: 0px;
+    }
+
+    100% {
+      width: 0.5em;
+      height: 0.5em;
+      margin-right: 0.3rem;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(91, 150, 212, 0.7);
+    }
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  a:hover .live-indicator {
+    box-shadow: 0 0 0 0 #fff;
+    background-color: #fff;
+    width: 0px;
+    height: 0px;
+    margin-right: 0;
+  }
+
+  a {
+    padding: 0.8em 1em;
+    color: var(--accent-color);
+    border: 1.5px solid var(--accent-color);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.7em;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &:hover {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+
+    p {
+      transition: all 0.2s;
+      overflow: hidden;
+    }
+
+    .off {
+      display: inline-block;
+      width: 0px;
+      overflow: hidden;
+      transform: translateX(100%);
+    }
+
+    &:hover .off {
+      margin-left: 0.2rem;
+      transform: translateX(0);
+      width: auto;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.ui-files-list {
+  .files-item {
+    margin: 1rem 0;
+  }
+
+  .files-item a {
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 0.3rem;
+    }
+  }
+}

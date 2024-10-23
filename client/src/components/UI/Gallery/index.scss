@@ -1,0 +1,31 @@
+.ui-gallery {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+
+  .main-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .swiper {
+    height: 100%;
+
+    .swiper-pagination-bullet {
+      background-color: #fff !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #fff !important;
+    }
+  }
+}
