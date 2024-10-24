@@ -2,10 +2,11 @@ import { Link } from "@/navigation";
 
 import "./index.scss";
 import Image from "next/image";
+import { getImage } from "@/utils/index";
 
 function Deputy({ data, round }) {
   const info = data.attributes;
-  const imageUrl = "http://127.0.0.1:1337" + info.avatar.data.attributes.url;
+  const imageUrl = getImage() + info.avatar.data.attributes.url;
   const fraction = info.fraction.data && info.fraction.data.attributes.name;
 
   return (

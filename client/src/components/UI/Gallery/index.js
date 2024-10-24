@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import SwiperController from "../SwiperController";
 import Image from "next/image";
+import { getImage } from "@/utils/index";
 
 import "./index.scss";
 import "swiper/css";
@@ -12,7 +13,7 @@ import "swiper/css/pagination";
 function Gallery({ images }) {
   const slides = images.data.map((image, index) => {
     const data = image.attributes;
-    const url = "http://127.0.0.1:1337" + data.url;
+    const url = getImage() + data.url;
     const style = { backgroundImage: `url(${url})` };
 
     return (

@@ -1,20 +1,15 @@
 export const fetchStrapi = async (endpoint, field) => {
-  // Determine the base URL based on the execution context
-  const isClient = typeof window !== "undefined"; // True if running in the browser
-  const baseUrl = isClient
-    ? process.env.NEXT_PUBLIC_STRAPI_API_URL // Client-side URL
-    : process.env.STRAPI_API_URL; // Server-side URL
+  const baseUrl =
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || process.env.STRAPI_API_URL;
+  const apiKey =
+    process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_KEY;
 
-  const testUrl = `${baseUrl}/api/${endpoint}`;
-
-  const apiKey = isClient
-    ? process.env.NEXT_PUBLIC_STRAPI_API_KEY // Client-side URL
-    : process.env.STRAPI_API_KEY; // Server-side URL
+  const auth = "Bearer " + apiKey;
 
   try {
-    const res = await fetch(testUrl, {
+    const res = await fetch(baseUrl + `/${endpoint}`, {
       headers: {
-        Authorization: "Bearer " + apiKey,
+        Authorization: auth,
       },
     });
 
@@ -33,23 +28,19 @@ export const fetchStrapi = async (endpoint, field) => {
 };
 
 export const postStrapi = async (endpoint, data) => {
-  const isClient = typeof window !== "undefined"; // True if running in the browser
-  const baseUrl = isClient
-    ? process.env.NEXT_PUBLIC_STRAPI_API_URL // Client-side URL
-    : process.env.STRAPI_API_URL; // Server-side URL
+  const baseUrl =
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || process.env.STRAPI_API_URL;
+  const apiKey =
+    process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_URL;
 
-  const testUrl = `${baseUrl}/api/${endpoint}`;
-
-  const apiKey = isClient
-    ? process.env.NEXT_PUBLIC_STRAPI_API_KEY // Client-side URL
-    : process.env.STRAPI_API_KEY; // Server-side URL
+  const auth = "Bearer " + apiKey;
 
   try {
-    const res = await fetch(testUrl, {
+    const res = await fetch(baseUrl + `/${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + apiKey,
+        Authorization: auth,
       },
       body: JSON.stringify(data),
     });

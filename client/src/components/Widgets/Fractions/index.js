@@ -2,12 +2,13 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 
 import "./index.scss";
+import { getImage } from "@/utils/index";
 
 function Fractions({ data }) {
   const t = useTranslations("Widgets");
   const fractions = data.map((fraction) => {
     const data = fraction.attributes;
-    const imageUrl = "http://127.0.0.1:1337" + data.image.data.attributes.url;
+    const imageUrl = getImage() + data.image.data.attributes.url;
 
     return (
       <li className="fractions-item" key={fraction.id}>

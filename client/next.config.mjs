@@ -3,10 +3,11 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
+  output: "standalone",
   images: {
     remotePatterns: [
       {
-        hostname: process.env.HOSTNAME || "127.0.0.1",
+        hostname: "127.0.0.1",
       },
     ],
   },

@@ -2,7 +2,7 @@ import "./index.scss";
 
 function FilesList({ files }) {
   const list = files.data.map((file) => {
-    const downloadLink = "http://127.0.0.1:1337" + file.attributes.url;
+    const downloadLink = getImage() + file.attributes.url;
 
     return (
       <li className="files-item" key={file.id}>

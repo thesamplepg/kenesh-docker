@@ -2,11 +2,12 @@ import { Link } from "@/navigation";
 import Image from "next/image";
 
 import "./index.scss";
+import { getImage } from "@/utils/index";
 
 function NewsPost(props) {
   const data = props.data.attributes;
   const imageUrl = data.thumbnail.data.attributes.url;
-  const url = "http://127.0.0.1:1337" + imageUrl;
+  const url = getImage() + imageUrl;
 
   return (
     <div className={"news-post-component"}>

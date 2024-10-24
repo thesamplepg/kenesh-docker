@@ -1,10 +1,10 @@
 import { Link } from "@/navigation";
 
 import "./index.scss";
+import { getImage } from "@/utils/index";
 
 function Fraction({ data }) {
-  const imageUrl =
-    "http://127.0.0.1:1337" + data.attributes.image.data.attributes.url;
+  const imageUrl = getImage() + data.attributes.image.data.attributes.url;
 
   return (
     <div className="fraction-component drop-shadow-lg">

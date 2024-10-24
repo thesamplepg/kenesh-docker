@@ -2,12 +2,13 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 
 import "./index.scss";
+import { getImage } from "@/utils/index";
 
 function Chairmans({ data }) {
   const t = useTranslations("Widgets");
   const chairmans = data.map((chairman) => {
     const data = chairman.attributes;
-    const imageUrl = "http://127.0.0.1:1337" + data.avatar.data.attributes.url;
+    const imageUrl = getImage() + data.avatar.data.attributes.url;
 
     return (
       <li className="chairmans-item" key={chairman.id}>

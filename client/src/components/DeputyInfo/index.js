@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./index.scss";
 import Image from "next/image";
+import { getImage } from "@/utils/index";
 
 const socialIcons = {
   instagram: faInstagramSquare,
@@ -18,7 +19,7 @@ const socialIcons = {
 };
 
 function DeputyInfo({ name, group, avatar, phone, mail, social, text }) {
-  const url = "http://127.0.0.1:1337" + avatar.data.attributes.url;
+  const url = getImage() + avatar.data.attributes.url;
 
   const style = {
     backgroundImage: `url(${url})`,

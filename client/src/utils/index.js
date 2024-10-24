@@ -8,3 +8,7 @@ export const withoutLocale = (pathname) => {
 
   return path;
 };
+
+export const getImage = () =>
+  process.env.NEXT_PUBLIC_STRAPI_API_URL ||
+  process.env.NEXT_PUBLIC_STRAPI_API_URL;

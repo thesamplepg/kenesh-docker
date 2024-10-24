@@ -7,11 +7,12 @@ import "swiper/css/bundle";
 import "swiper/css/autoplay";
 import "./index.scss";
 import { Link } from "@/navigation";
+import { getImage } from "@/utils/index";
 
 function MainPost({ data }) {
   const images = data.attributes.images.data.map((image, index) => {
     const data = image.attributes;
-    const url = "http://127.0.0.1:1337" + data.url;
+    const url = getImage() + data.url;
 
     return (
       <SwiperSlide key={index}>
