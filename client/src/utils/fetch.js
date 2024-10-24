@@ -3,10 +3,6 @@ export const fetchStrapi = async (endpoint, field) => {
     process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const apiKey =
     process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_KEY;
-
-  console.log("NEXT_PUBLIC - ", process.env.NEXT_PUBLIC_STRAPI_API_URL);
-  console.log("ENV - ", process.env.STRAPI_API_URL);
-
   const auth = "Bearer " + apiKey;
 
   try {
