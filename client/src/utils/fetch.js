@@ -2,7 +2,7 @@ export const fetchStrapi = async (endpoint, field) => {
   const baseUrl =
     process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const apiKey =
-    process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_KEY;
+    process.env.STRAPI_API_KEY || process.env.NEXT_PUBLIC_STRAPI_API_KEY;
   const auth = "Bearer " + apiKey;
 
   try {
@@ -30,7 +30,7 @@ export const postStrapi = async (endpoint, data) => {
   const baseUrl =
     process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const apiKey =
-    process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_KEY;
+    process.env.STRAPI_API_KEY || process.env.NEXT_PUBLIC_STRAPI_API_KEY;
 
   const auth = "Bearer " + apiKey;
 
