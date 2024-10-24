@@ -10,8 +10,8 @@ Icon
 .Trashes
 ._*
 
-/public
-.tmp
+# /public
+# .tmp
 
 
 ############################
