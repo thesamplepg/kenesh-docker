@@ -1,13 +1,13 @@
-version: "3"
 services:
   nextjs:
     build:
-      context: ./client # Path to Next.js app
-      dockerfile: Dockerfile # The Next.js Dockerfile
+      context: ./client
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Expose Next.js on port 3000
+      - "3000:3000"
     environment:
-      - NEXT_PUBLIC_STRAPI_API_URL=http://strapi:1337 # URL to Strapi
+      - NEXT_PUBLIC_STRAPI_API_URL=http://strapi:1337
+      - NEXT_PUBLIC_STRAPI_MEDIA_URL=http://strapi:1337
       - STRAPI_API_URL=http://strapi:1337
     depends_on:
       - strapi
@@ -16,24 +16,25 @@ services:
 
   strapi:
     build:
-      context: ./server # Path to Strapi app
-      dockerfile: Dockerfile # The Strapi Dockerfile
+      context: ./server
+      dockerfile: Dockerfile
     ports:
-      - "1337:1337" # Expose Strapi on port 1337
+      - "1337:1337"
     volumes:
-      - ./server/public/uploads:/app/public/uploads # Persist uploaded files
+      - ./server/public/uploads:/app/public/uploads
+      - ./server/.tmp:/app/.tmp # For SQLite persistence
     environment:
       - DATABASE_CLIENT=sqlite
-      - DATABASE_FILENAME=.tmp/data.db # SQLite DB persistence
+      - DATABASE_FILENAME=.tmp/data.db
     networks:
       - webnet
 
   nginx:
-    image: nginx:alpine # Use a lightweight Nginx image
+    image: nginx:alpine
     ports:
-      - "80:80" # Expose Nginx on port 80
+      - "80:80"
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf # Mount your Nginx config
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - nextjs
       - strapi
