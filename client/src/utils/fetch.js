@@ -1,13 +1,16 @@
 export const fetchStrapi = async (endpoint, field) => {
   const baseUrl =
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || process.env.STRAPI_API_URL;
+    process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const apiKey =
     process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_KEY;
+
+  console.log("NEXT_PUBLIC - ", process.env.NEXT_PUBLIC_STRAPI_API_URL);
+  console.log("ENV - ", process.env.STRAPI_API_URL);
 
   const auth = "Bearer " + apiKey;
 
   try {
-    const res = await fetch(baseUrl + `/${endpoint}`, {
+    const res = await fetch(baseUrl + `/api/${endpoint}`, {
       headers: {
         Authorization: auth,
       },
@@ -29,14 +32,14 @@ export const fetchStrapi = async (endpoint, field) => {
 
 export const postStrapi = async (endpoint, data) => {
   const baseUrl =
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || process.env.STRAPI_API_URL;
+    process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const apiKey =
-    process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_URL;
+    process.env.NEXT_PUBLIC_STRAPI_API_KEY || process.env.STRAPI_API_KEY;
 
   const auth = "Bearer " + apiKey;
 
   try {
-    const res = await fetch(baseUrl + `/${endpoint}`, {
+    const res = await fetch(baseUrl + `/api/${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
